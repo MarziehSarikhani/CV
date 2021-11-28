@@ -1,0 +1,102 @@
+﻿#descriptionPanel,#imagePanel {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color:rgba(0,0,0,.9);
+    min-height:100%;
+    color:#fff; 
+    overflow:auto;
+}
+#close {
+ position:absolute;
+ top:2px;
+ right:5px;
+ font-size:3em;
+ font-weight:bold;
+ color:red;
+ background-color:transparent;
+ border:none;
+ cursor:pointer;
+}
+.descriptionItem,.item {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+   min-height:100%;
+}
+.descriptionItem h3,.item h3{
+    height:50px;
+    text-align:center;
+    margin:20px auto;
+    font-size:1.3em;
+    font-weight:bold;
+    color:orange;
+}
+.descriptionItem p,.item p {
+    text-align:justify;
+    padding:20px;
+    line-height:50px;
+}
+    .descriptionItem a, .item a {
+        width:150px;
+        font-size:0.9em;
+        color:orange;
+        border-color:orange;
+    }
+.item .onlyPic {
+    max-width:700px; 
+     margin:auto;   
+     padding-top:50px;
+}
+.onlyPic img {
+    display:block;
+    margin:auto;
+    width:100%;   
+}
+
+.fadeOut {
+    opacity:0;
+    display:none;
+}
+.hide {
+    display:none;
+}
+.overflowHidden {
+    overflow:hidden;
+}
+
+     @media screen and (max-width : 360px) , (max-height : 360px){
+   .descriptionItem h3,.item h3 {
+      font-size:1em;
+    }
+    .descriptionItem p, .item p {
+        font-size:0.8em;
+        line-height:25px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-size:1em!important;
+    }
+
+   
+}
+
+@media screen and (min-width : 960px ) and (min-height : 700px) {
+ .descriptionItem h3, .item h3{
+    margin:50px auto;
+   }
+.descriptionItem p, .item p {
+    padding:50px;
+    margin:10px 100px;
+  }
+#close {
+     top:50px;
+     right:50px;
+     transition:0.5s;
+    }
+    #close:hover {
+        transform:scale(1.2);
+    }
+
+}

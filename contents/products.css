@@ -1,0 +1,185 @@
+﻿body {
+    direction:rtl;
+    background-image:url('http://sarikhani.id.ir/images/bodyProductsBg.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed; 
+    color:#fff;
+}
+main {
+    min-height:100vh;
+    width:100%;
+   background:linear-gradient(0deg, #fff 0%,#fff 40%, rgba(0,0,0,0.5) 100%);
+   text-align:center;
+}
+.products > h2 {
+     text-align:center;
+    margin:0 auto;
+    margin-bottom:10px;
+    padding:10px;
+    color:orange;
+    font-size:1.2em;
+   
+}
+    .products > h2::before {
+            content:'';
+            background-image:url('http://sarikhani.id.ir/images/paragraf.svg');
+            display:inline-block;
+            width:20px;
+            height:20px;
+            vertical-align:middle;
+            margin-left:5px;
+    }
+#mainSection article {
+    margin-left:auto!important;
+    margin-right:auto!important;
+    margin-bottom:50px;
+    position:relative;
+    overflow:hidden;
+}
+
+#mainSection {
+    text-align:center;
+   padding-bottom:50px;
+}
+
+#mainSection h1{
+    text-align:center;
+    font-weight:bold;
+    margin:0 auto;
+    padding:10px;
+    color:orange;
+    font-size:1.4em;
+}
+#mainSection article > a:first-child{
+    position:relative;
+    max-width:400px;
+    max-height:300px;
+    overflow:hidden;
+    border-radius:5px;
+}
+    #mainSection article figure img {
+        display:block;
+        width:100%;
+        height:100%;
+    }
+    #mainSection article > a {
+        display: block;
+        height:100%;
+    }
+    #mainSection article .popup {
+      position:absolute;
+      line-height:50px;
+      bottom: 0;
+      transition:.5s;
+      width:100%;
+      text-align:right;
+      padding-right:5px;
+      cursor:pointer;
+      height:300px;    
+       color:orangered;
+        background-image:linear-gradient(0deg, rgba(0,0,0,0.9) 0%,rgba(0,0,0,.5) 70%, rgba(0,0,0,0) 100%);
+
+       
+    }
+.popup h3 {
+    margin-top:150px;
+    font-size:1.2em;
+     font-weight: normal;
+}
+#mainSection article > a:last-child {
+    font-size:0.8em;
+    color:#fff;
+    width:120px;
+    height:25px;
+    padding-top:5px;
+    margin-right:5px;
+    display:block;
+    border:1px solid #fff;
+    border-radius:3px;
+    text-align:center;
+    position:absolute;
+    bottom:15px;
+    transition:0.5s;
+}
+.bottun {
+    color:#fff;
+    width:120px;
+    height:27px;
+    padding-top:5px;
+    display:block;
+    border:1px solid #fff;
+    border-radius:20px;
+    text-align:center;   
+}
+#mainSection .bottun {
+     margin:20px auto;
+     transition:0.3s;
+}
+
+
+
+
+@media screen and (max-width : 360px) , (max-height : 360px){
+ 
+    h1, h2, h3, h4, h5, h6 {
+        font-size:1em!important;
+    }
+
+   
+}
+
+
+@media screen and (max-width : 720px) {
+    [class*="col-"] {/*در حالت تک ستونه عناصر وسط قرار گیرند*/
+        float: none!important;
+        max-width:400px!important;   
+         }
+  
+   
+}
+
+@media screen and (min-width : 960px ) and (min-height : 700px) {
+   
+  #mainFooter section {
+        margin-top:0px!important;
+        padding-top:50px;
+    }
+   
+      #mainSection h1{
+        padding:50px;
+      }
+      #mainSection article > a:last-child {
+       bottom:-40px;
+     }
+    #mainSection article:hover .popup {
+        bottom: 0;
+     }
+    #mainSection article:hover a:last-child {
+        bottom:15px;
+     }
+    #mainSection article .popup {    
+      bottom: -90px;   
+       }
+        #mainSection article > a:hover {
+           background-color:rgba(244,75,0,.5);
+           border-color:transparent;
+        }
+        #mainSection .bottun {
+             margin-bottom:50px;
+             transition:0.5s;
+              }  
+ p.copyRight{
+    position: static!important;   
+   }
+        
+
+
+    .products > h2 {
+        text-align: right;
+    }
+    .bottun:hover {
+        color:orange;
+        border-color:orange;
+    }
+}

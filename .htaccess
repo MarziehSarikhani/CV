@@ -1,0 +1,16 @@
+<files ".htaccess">
+ deny from all
+ order allow,deny
+</files>
+Options -Indexes
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.sarikhani.id.ir [NC]
+RewriteRule ^(.*)$ http://sarikhani.id.ir/$1 [R=301,NC]
+RewriteRule ^index$ / [L,S]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /products.php [L]
+
+ErrorDocument 403 /errors/AccessDenied.php
+ErrorDocument 404 /errors/AccessDenied.php
+

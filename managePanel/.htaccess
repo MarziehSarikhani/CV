@@ -1,0 +1,15 @@
+<files ".htaccess">
+ Deny from all
+ Order allow,deny
+</files>
+Options -Indexes
+#RewriteEngine On
+#RewriteCond %{REQUEST_URI} /managePanel
+#RewriteRule . http://localhost:8080/Sarikhani/managePanel/login.php [L,S]
+#RewriteRule ^index$ /Sarikhani/managePanel/ [L,S]
+#RewriteRule /([^/]+)$ http://localhost:8080/Sarikhani/managePanel/index.php/?action=$1 [L,S]
+#RewriteRule /messages/view/(\d+)$ index.php/?action=messages&do=view&commentID=$1 [L,S]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /Sarikhani/managePanel/ [L]
+

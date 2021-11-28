@@ -1,0 +1,21 @@
+<files ".htaccess">
+  Deny from all
+  Order allow,deny
+</files>
+<files "index.txt">
+  deny from all
+  order allow,deny
+</files>
+<files "login.txt">
+   deny from all
+   order allow,deny
+</files>
+<files "counterVisitorSite.txt">
+    deny from all
+    order allow,deny
+</files>
+<files "loginSuccess.txt">
+   deny from all
+   order allow,deny
+</files>
+ErrorDocument 500 /Sarikhani/errors/AccessDenied.php

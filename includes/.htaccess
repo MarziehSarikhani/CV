@@ -1,0 +1,26 @@
+<files ".htaccess">
+  Deny from all
+  Order allow,deny
+</files>
+<files "config.php">
+  Deny from all
+  Order allow,deny
+</files>
+<files "includes.php">
+  Deny from all
+  Order allow,deny
+</files>
+<files "utility.php">
+  Deny from all
+  Order allow,deny
+</files>
+<files "showAll.php">
+  Deny from all
+  Order allow,deny
+</files>
+<files "ShowItem.php">
+  Deny from all
+  Order allow,deny
+</files>
+
+ErrorDocument 500 /Sarikhani/errors/AccessDenied.php

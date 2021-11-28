@@ -1,0 +1,204 @@
+﻿body {
+    background-color:rgb(200,206,223);
+    color:#8090b5;
+}
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    display:block;
+}
+.row::after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
+main {
+    min-height:500px;
+}
+main > div, main > section {
+    background-color:#fff;
+    padding-bottom:50px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.topPanel h1{
+   text-align:center;
+    font-weight:bold;
+    margin:0 auto;
+    padding:10px;
+    color:orange;
+    font-size:1.4em;
+}
+.galery h1,.galery h2,.galery h3,.galery h4 {
+    margin:20px auto;
+     color:orange;
+     padding:20px;
+
+}
+    .galery h1::before,.galery h2::before,.galery h3::before,.galery h4::before {
+        content:'';
+            background-image:url('http://sarikhani.id.ir/images/paragraf.svg');
+            display:inline-block;
+            width:20px;
+            height:20px;
+            vertical-align:middle;
+            margin-left:5px;
+    }
+
+.bottun {
+    color:#8090b5;
+    width:100px;
+    height:27px;
+    padding-top:5px;
+    display:block;
+    border:1px solid #8090b5;
+    border-radius:20px;
+    text-align:center;   
+}
+.topPanel .bottun {
+   margin:0 5px;
+   transition:0.3s;
+    padding:3px;
+}
+    .topPanel .bottun:last-child {
+        width:auto;
+    }
+.topPanel nav {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;   
+    padding-top:20px;
+}
+    .topPanel nav span {
+        padding-top:5px;
+        font-size:1.5em;
+    }
+
+  
+.ul-panel {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    margin-top:50px;
+    line-height:1.5em;
+}
+    .ul-panel li::before {
+        content:'\2713';
+        color:red;
+        margin-left:5px;
+    }
+
+ #picturs {
+    display:flex;
+    flex-wrap:wrap;
+    padding:0 10px;
+    margin-top:50px;
+    
+}
+  #picturs img{
+    display:block;
+    width:100%;
+    height:100%;
+}
+    #picturs .popup {
+       max-width:300px;
+        max-height:300px;
+        margin:10px auto;
+        cursor:pointer;
+        /*position:relative;*/
+        overflow:hidden;
+        border-radius:10px;
+    }
+
+.productDesc p {
+    text-align:justify;
+    line-height:1.5em;
+    padding:50px;
+}
+figure img {
+    float:right;
+    margin:20px;
+    width:400px;
+    height : 267px;
+}
+#control {
+     position:absolute;
+     bottom:5%;
+     width:200px;
+     right:0;
+     left:0;
+     font-size:2em;
+     font-weight:bold;     
+     margin:auto;
+
+}
+#control span{
+        cursor:pointer;
+         color:red;
+         margin-left:50px;
+   
+}
+p{
+    overflow-x: hidden;
+}
+    
+@media screen and (max-width : 460px ) {
+ #picturs {
+    display:block;
+}
+   
+
+  
+
+}
+@media screen and (max-width : 525px )  {
+    .ul-panel {
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .productDesc {
+        max-width:400px;
+        margin:auto;
+    }
+         figure img {
+        display:block;
+        width:100%;
+        margin:10px auto;
+    }
+
+}
+@media screen and (min-width : 960px ) and (min-height : 700px) {
+     .topPanel h1{
+        padding:50px;
+        
+      }
+    .bottun:hover {
+        color:orange;
+        border-color:orange;
+    }
+  #mainFooter section {
+        margin-top:0px!important;
+        padding-top:50px;
+    }
+   .topPanel nav {  
+    padding-top:0;
+}
+    .popup img{
+        transition:0.5s;      
+    }
+        .popup img:hover {
+              transform:scale(1.2);
+        }
+    .popup:hover {
+        box-shadow:0 0 3px #888;
+    }
+ p.copyRight{
+    position: static!important;   
+   }
+   
+    
+
+
+}

@@ -1,0 +1,254 @@
+﻿body,html {
+    height:100%;
+}
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    display:block;
+}
+.row::after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
+body {
+   background-color:rgba(0,0,0,1);
+    color:#fff;   
+}
+
+
+#fullpage {
+    position:relative;
+    transform:translate(0px,0px);
+    transition:0.9s;
+}
+#mainPage {
+    background-image:url('http://localhost:8080/Sarikhani/images/bodyBg.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.active {
+
+}
+#fullpage.slideToUp {
+    transform:translate(0,-100vh);/*100% view port*/
+}
+#fullpage.slideToBottom {
+    transform:translate(0,0);
+}
+.fadeIn{
+    transition: 0.7s;
+    opacity: 0.4;
+}
+
+.section {
+    position:relative;
+    transition: 0.7s;
+}
+ 
+#fullpage > .section:last-child {
+   
+     padding-top:1px; 
+} 
+ 
+
+#sideNav{
+    position: fixed;
+    left:2%;
+    top:40%;
+}
+#sideNav .bullet{
+    position: relative;
+    cursor: pointer; 
+    display: block; 
+    background-color: red;
+    border-radius: 50%;
+    width: 5px;
+    height:5px;
+    margin: 15px auto;
+    transition: .3s;
+}
+#sideNav .bullet:not([class ~='activeBullet'])::before{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    top:-5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+    cursor: pointer;
+}
+#sideNav .bullet:not([class ~='activeBullet']):hover{
+transform: scale(2);
+}
+#sideNav .activeBullet{
+    width: 13px;
+    height:13px;
+}
+
+#mainPage h1{
+    padding-top:10px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#sliderProduct{
+    position: relative;
+    direction: ltr;
+    overflow: hidden;
+    max-width: 400px;
+    margin:  auto;
+    margin-top: 80px;
+}
+#sliderProduct img{
+    display: block;
+    width: 100%;
+
+}
+#sliderProduct ul{
+    /*width: 2000px;*/
+    left: -400px;
+    transition: 1s;
+    position:relative;
+}
+#sliderProduct ul li{
+    float: left;
+}
+#sliderProduct .group a{
+    display: block;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+#sliderProduct .group .imagelabel{
+    background-color:rgba(255,0,0,0.6);
+    position:absolute;
+    width:150px;
+    height:25px;
+    text-align: center;
+    top:25px;
+    left:-40px;
+    padding-top:5px;
+    transform:rotate(-45deg);
+}
+#sliderProduct .group h2{
+    height: 50px;
+    text-align: center;
+    color: orange;
+    transition: 0.3s;
+    font-size: 1.2em;
+}
+.control{
+    margin: 50px auto;
+    margin-bottom: 0;
+    text-align: center;
+    user-select: none;
+}
+
+.control span{
+    cursor:pointer;
+    font-size:2em;
+    font-weight:bold;
+    margin:0 30px;
+    transition:0.3s;
+    color: orange;
+}
+#sliderProduct .group a:hover  h2{
+    color: orangered;       
+}
+.control span:hover{
+   color: orangered;
+}
+
+#showProducts{  
+    position: absolute; 
+    bottom: 20px; 
+    font-size: 0.9em;
+    width: 190px;
+    height: 30px;
+    background-color:rgba(255,0,0,.5);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    text-align:center;
+    transition: 0.3s;
+    outline:none;
+    animation-name:blinker;
+      animation-duration:2s;
+      animation-iteration-count:infinite;
+
+}
+@keyframes blinker {
+    0% {
+        box-shadow: 0 0 2px 1px rgba(255,0,0,1);
+    }
+    50% {
+        box-shadow: 0 0 2px 15px rgba(255,0,0,.3);
+    }
+    100% {
+         box-shadow: 0 0 2px 1px rgba(255,0,0,0.4);
+    }
+}
+#showProducts a{
+padding: 5px;
+    display: block;
+    color: rgba(255,255,255,0.7);
+    transition: 0.3s;
+}
+#showProducts:hover a{
+    color: orange;
+}
+#showProducts:hover {
+    animation-duration:0.5s;
+    }
+
+
+@media screen and (max-width : 960px ) , (max-height : 600px) {
+    body{
+        overflow: visible;
+    }
+   #fullpage .section {
+        min-height : 100vh;
+    }
+    #sideNav{
+        display: none;
+    }
+    #showProducts{  
+        left: 0; 
+        right: 0; 
+        margin: auto;    
+    }
+    .control{
+        margin: 0 auto;
+        padding-bottom: 70px;
+    }
+    
+}
+@media screen and (min-width : 960px ) and (min-height : 600px) {
+    body{
+        overflow: hidden;
+    }
+   #fullpage .section {
+        height : 100vh;
+    }
+
+   .hiddenScrollbar::-webkit-scrollbar {
+           display: none;   
+                                  }
+   .hiddenScrollbarInEdge {
+              -ms-overflow-style: none;
+       }
+       p.copyRight{
+        position: absolute;
+        bottom: 20px;
+        right: 20%;
+        left: 20%;
+        padding: 0;
+     }
+     #mainPage h1{
+        padding-top: 80px;
+     }
+     
+     
+}

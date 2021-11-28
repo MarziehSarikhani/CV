@@ -1,0 +1,528 @@
+body{
+    direction:rtl;
+    background-color: slategrey;
+    font-size: 18px;
+}
+main{
+    background-color: white;
+    min-height: 100vh;
+    padding-top: 50px;
+
+}
+main article{
+    margin-bottom: 100px;
+}
+#adminMenu nav header{
+    background-color: #666;
+    background-image: linear-gradient(#888,#333);
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+}
+#adminMenu nav ul li{
+    padding: 10px;
+    background-color: #444;
+    border-bottom: 1px solid #888;
+    text-align: center;
+}
+#adminMenu nav ul li a{
+    display: block;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#adminMenu nav ul li a:hover{
+    padding-right: 5px;
+    color: coral;
+}
+#mainFooter{
+    background-color: #666;
+    background-image: linear-gradient(#666,#333);
+    text-align: center;
+    padding: 25px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+#dashboard header{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 20px;
+    background-image: linear-gradient(#999,#333);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+
+}
+#dashboard table{
+   margin: auto;
+}
+#dashboard table td{
+  padding: 10px;
+    width: 200px;
+    border-bottom: 1px dashed #222222;
+
+}
+.group-header{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 20px;
+    background-color: khaki;
+}
+.group-header a{
+    color: #000;
+    margin: 10px 10px;
+    transition: 0.3s;
+    display: block;
+}
+#cats{
+    height: 300px;
+    overflow-y: scroll;
+    border-radius: 3px;
+    box-shadow:  3px 3px 5px #e3e3e3 inset;
+    border: 1px solid #aaa;
+    width: 90%;
+    margin:10px auto;
+    padding: 20px;
+}
+#cats ul{
+    padding-right: 50px;
+}
+#cats  li{
+    padding: 5px 0;
+    /*list-style: square;*/
+}
+#cats > li{
+    padding: 15px 0;
+/*    list-style: disc;*/
+}
+
+#createCat,#deleteCat{
+    margin: 10px;
+    padding: 20px 10px;
+}
+#createCat input[name="catName"],#createCat select,#deleteCat select,#showProductByCategory{
+    width: 150px;
+    border: 1px solid #222222;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 1.1em;
+}
+
+.button{
+    width: 100px;
+    height: 30px;
+    background-color: #888;
+    background-image: linear-gradient(#666,#333);
+    transition: 0.3s;
+    border: 1px solid #888;
+    border-radius: 3px;
+    color: white;
+    cursor:pointer;
+    margin-left: 5px;
+    font-size: 1em;
+    display: inline-block;
+    text-align: center;
+}
+.invalid{
+    border: 1px solid red!important;
+}
+.message-error{
+    color: rgb(250,0,0);
+    font-size: 18px;
+    text-align: center;
+}
+.message-success{
+    color: rgb(0,150,0);
+    font-size: 18px;
+    text-align: center;
+}
+#message,.message{
+ text-align: center;
+    display: block;
+    padding: 10px;
+}
+.headerOption{
+    font-weight: bold;
+    color: darkred;
+}
+#content article table{
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+}
+#content article table td:first-child{
+    width: 35px;
+}
+#content article table td:last-child{
+    width: 50px;
+}
+#content article table th{
+    font-weight: bold;
+    background-image: linear-gradient(#999,#333);
+    padding: 10px;
+    color: white;
+    border: 1px solid #888888;
+}
+#content article table td{
+    padding: 5px;
+    border: 1px solid #888888;
+
+}
+#content article table tr:nth-child(2n-1){
+    background-color: #aaaaaa;
+}
+#content article table td a,#content article table td img{
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+}
+#productShow td a{
+    color: white;
+    background-color: #666666;
+    padding:5px;
+    transition: 0.3s;
+    margin: 5px 0;
+    display: inline-block;
+    width: 40px;
+    
+}
+#productShow td:last-child a{
+    font-size:.8em;
+}
+#productShow td a.link{
+    color:blue;
+    background-color: transparent;
+    display:inline;
+    width: auto;
+    margin: 0;
+}
+.groupMessage{
+    cursor:pointer;
+
+}
+.downLevel,.upLevel{
+    cursor:pointer;
+    margin-left: 10px;
+}
+
+#cats li:first-child > .upLevel{
+    cursor:default;
+    color: #666666;
+}
+#cats li:last-child > .downLevel{
+    cursor:default;
+    color: #666666;
+}
+#operationsMessage{
+    display: block;
+    margin: 10px auto;
+    height: 40px;
+}
+#paging{
+    text-align: center;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#paging li a{
+    display: block;
+    color: white;
+    height: 30px;
+}
+#paging li{
+    width: 30px;
+    height: 25px;
+    border-radius:2px ;
+    background-color: #555;
+    padding-top: 5px;
+    transition: 0.3s;
+    margin: 0 5px;
+    float: right;
+}
+#paging p{
+    display: none;
+}
+.activeSection{
+    background-color: #333!important;
+}
+.noReadedComment{
+    color: blue;
+    font-weight: bold;
+}
+.groupComment header.recivedComment{
+    background-color: darkorange;
+}
+.groupComment{
+    min-height: 200px;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    width: 90%;
+    margin: 10px auto;
+}
+.groupComment header{
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    line-height: 1.5em;
+}
+.groupComment header time{
+    margin-left: 20px;
+}
+.groupComment div {
+    padding: 20px;
+    line-height: 1.5em;
+}
+.buttonLink{
+    width: 100px;
+    height: 25px;
+    border-radius: 3px 50px 3px 50px;
+    background-color: darkorange;
+    color: white;
+    padding: 5px 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 3px #666666;
+    margin: 5px;
+    display: block;
+    margin-right: auto;
+    text-align: center;
+}
+
+#sendEmailForm{
+    display: none;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 30px auto;
+    width: 90%;
+    background-color: khaki;
+}
+#sendEmailForm p{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+#sendEmailForm div{
+    margin: 10px 0;
+}
+#sendEmailForm input[type="email"],#sendEmailForm input[name="chaptcha"],#sendEmailForm input[type="text"]{
+    width: 50%;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #888888;
+    direction: ltr;
+    padding-left: 10px;
+}
+.group-input{
+    width: 30%;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #888888;
+    /*direction: ltr;*/
+    padding-left: 10px;
+    font-size: 1em;
+    padding-right: 5px;
+}
+#sendEmailForm input[name="chaptcha"]{
+    text-align: center;
+    width: 100px;
+}
+#sendEmailForm textarea{
+    width: 90%;
+    min-height: 250px;
+    resize:none;
+    border-radius: 5px;
+    border: 1px solid #888888;
+    padding: 20px;
+}
+
+
+#sendEmailForm input[type="text"]{
+    direction: rtl;
+    padding: 0 10px;
+}
+#sendEmailForm input[type="radio"]{
+    margin: 10px 0;
+}
+#refresh-chaptcha{
+    background-color: #888888;
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    height: 45px;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 5px;
+    transition: 0.5s;
+    padding-top: 5px;
+}
+
+#image-chaptcha{
+    display:inline-block;
+    vertical-align: bottom;
+    margin: 5px;
+}
+.loading{
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index : 10;
+
+}
+.loading img{
+    display: block;
+    margin: auto;
+    padding-top: 10%;
+    z-index: 10;
+    width:200px;
+}
+div.loadingMessage{
+    margin: 0 auto;
+    height: 100px;
+    text-align: center;
+}
+
+.unpublished{
+    color: orangered!important;
+}
+#product div{
+    margin-top: 20px;
+}
+#product div label{
+    min-width: 100px;
+    display: inline-block;
+}
+#area{
+    width: 100%;
+    min-height: 300px;
+}
+.groupPictures{
+   position: relative;
+}
+.groupPicAndBtn{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+.groupPic{
+    width: 200px;
+}
+.groupBtn{
+    position:absolute;
+    top:10px;
+    right:75px ;
+}
+.messageProduct{
+    position: absolute;
+    bottom: 5px;
+    right: 20%;
+}
+.groupPicAndBtn .group-input{
+    width:94%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+fieldset{
+    border:1px solid #666666;
+    border-radius:5px;
+    padding:10px;
+}
+.parag{
+    margin: 10px;
+    float: right;
+}
+@media screen and (min-width: 960px){
+    #adminMenu nav ul li{
+        text-align: right;
+    }
+    #dashboard header{
+        text-align: right;
+        margin-top: 0;
+    }
+    #dashboard table{
+        margin:5px;
+    }
+    .group-input:focus{
+        box-shadow: 0 0 3px #444444;
+    }
+    #createCat input[name="catName"]:focus{
+        box-shadow: 0 0 3px #444444;
+    }
+  
+    .button:hover{
+        background-image: linear-gradient(#333,#666);
+    }
+    #paging p{
+        display: block;
+        margin: 0 20px;
+    }
+    #paging li:hover{
+        background-color: #333;
+    }
+    #messages header a:hover{
+        color: darkorange;
+    }
+    #productsList header a:hover{
+        color: darkorange;
+    }
+    .buttonLink:hover{
+        background-color: orangered;
+    }
+    #sendEmailForm input[type="email"]:focus{
+        box-shadow: 0 0 3px #666666;
+    }
+    #sendEmailForm textarea:focus{
+        box-shadow: 0 0 3px #666666;
+    }
+    #sendEmailForm input[name="chaptcha"]:focus{
+        box-shadow: 0 0 3px #666666;
+    }
+    #sendEmailForm input[type="text"]:focus{
+        box-shadow: 0 0 3px #666666;
+    }
+    #refresh-chaptcha:hover{
+        background-color: #222222;
+    }
+    #sendEmailForm input[type="submit"]:hover{
+        background-color: #222222;
+    }
+    .button:hover{
+        background-color: #222222;
+    }
+    #productShow td a:hover{
+        background-color: #333;
+        color: darkorange;
+    }
+    #productShow td a.link:hover {
+        background-color: transparent;
+        color: darkred;
+    }
+
+    .group-header a{
+       display: inline-block;
+    }
+    #content article table td a,#content article table td img{
+        display: inline-block;
+        margin: 0px;
+    }
+    #content article table td:last-child{
+        width: 160px;
+    }
+
+}

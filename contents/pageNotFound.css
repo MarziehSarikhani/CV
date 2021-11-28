@@ -1,0 +1,75 @@
+body {
+    background-image:url('http://sarikhani.id.ir/images/bodyProductsBg.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    color:#fff;
+}
+main {
+    min-height:70vh;
+    width:100%;
+    background:linear-gradient(0deg, rgba(0,0,0,0.8) 0%,rgba(0,0,0,.4) 40%, rgba(0,0,0,0.5) 100%);
+    text-align:center;
+}
+
+
+#mainSection {
+    text-align:center;
+    padding-bottom:50px;
+}
+
+#mainSection h1{
+    text-align:center;
+    font-weight:bold;
+    margin:0 auto;
+    padding:10px;
+    color:orange;
+    font-size:1.4em;
+}
+
+
+.bottun {
+    color:#fff;
+    width:auto;
+    height:27px;
+    padding:7px;
+    display:inline-block;
+    border:1px solid #fff;
+    border-radius:20px;
+    text-align:center;
+}
+
+
+#mainSection .bottun {
+    margin:20px auto;
+    transition:0.3s;
+}
+
+#mainSection p{
+margin:50px auto;
+padding:20px;
+background-color:rgb(255,198,91);
+max-width:500px;
+line-height:2rem;
+color:rgb(136,80,43);
+}
+@media screen and (min-width : 960px ) and (min-height : 700px) {
+    #mainFooter section {
+        margin-top:0px!important;
+        padding-top:50px;
+    }
+    #mainSection h1{
+        padding:50px;
+    }
+    #mainSection .bottun {
+        margin-bottom:50px;
+        transition:0.5s;
+    }
+    p.copyRight{
+        position: static!important;
+    }
+    .bottun:hover {
+        color:orange;
+        border-color:orange;
+    }
+}

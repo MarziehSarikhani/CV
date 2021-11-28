@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+body{
+    direction: rtl;
+    font-family: sans-serif,Tahoma;
+    color: white;
+    font-weight: 300;
+}
+input{
+    font-family: inherit;
+    font-size: inherit;
+}
+.login-wrapper{
+    background: rgb(0,185,185);
+    background: linear-gradient(to bottom right, rgb(0,164,164) 0%, rgb(0,185,185) 100%);
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    margin-top: -200px;
+}
+
+.login-container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 80px 0;
+    height: 500px;
+    text-align: center;
+}
+.login-container h1{
+    font-size: 40px;
+    font-weight: 200;
+}
+
+form{
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+input{
+    display: block;
+    outline: 0;
+    border: 1px solid rgba(255,255,255,.4);
+    background-color: rgba(255,255,255,.2);
+    width: 250px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    transition-duration: 0.25s;
+    font-weight: 300;
+}
+
+input:hover{
+    background-color: rgba(255,255,255,.4);
+}
+
+input:focus{
+    background-color: white;
+    width: 300px;
+    color:rgb(0,185,185);
+}
+::placeholder{
+    font-family: inherit;
+    color: white;
+    font-weight: 300;
+}
+button{
+    outline: 0;
+    background-color: white;
+    border: 0;
+    padding: 10px 15px;
+    color: rgb(0,185,185);
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+}
+button:hover{
+    background-color: rgb(223, 227, 231);
+}
+ .invalid {
+    border-color:red;
+}
+#refresh-chaptcha{
+    background-color: rgb(30,122,128);
+    color: white;
+    font-size: 30px;
+    width: 45px;
+    height: 43px;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 5px;
+    padding-top: 7px;
+    padding-right: 5px;
+    transition: 0.5s;
+}
+#refresh-chaptcha:hover{
+    background-color: rgb(16,67,69);
+}
+#image-chaptcha{
+    display:inline-block;
+    vertical-align: bottom;
+    margin: 5px;
+}
+.login-container p:last-child{
+    color: rgb(150,0,0);
+    font-size: 20px;
+}
